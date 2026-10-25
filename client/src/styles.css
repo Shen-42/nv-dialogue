@@ -1,0 +1,116 @@
+/* Tokens. Card 7 adds the CRT overlay, the amber theme and the font files. */
+:root {
+  --screen-bg: #0b120d;
+  --page-bg: #050806;
+  --phosphor: #4dff9a;
+  --phosphor-dim: #3fbf78;
+  --warn: #ffd166;
+  --line: #2a5c3e;
+  --font-mono: "VT323", "Share Tech Mono", ui-monospace, Menlo, Consolas, monospace;
+  --tap: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.screen {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--screen-bg);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.screen-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  color: var(--phosphor-dim);
+}
+
+.screen-body {
+  flex: 1;
+}
+
+.screen-body h2 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+.status-list {
+  margin: 0 0 16px;
+}
+
+.status-list div {
+  display: flex;
+  gap: 16px;
+}
+
+.status-list dt {
+  width: 120px;
+  color: var(--phosphor-dim);
+}
+
+.status-list dd {
+  margin: 0;
+}
+
+.message-warn {
+  color: var(--warn);
+}
+
+button {
+  min-height: var(--tap);
+  padding: 0 16px;
+  font: inherit;
+  color: var(--phosphor);
+  background: transparent;
+  border: 1px solid var(--phosphor);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--phosphor);
+  outline-offset: 2px;
+}
+
+.screen-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  color: var(--phosphor-dim);
+  font-size: 0.9rem;
+}
